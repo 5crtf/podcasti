@@ -1,0 +1,146 @@
+/* Плеер */
+.player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 16px 20px;
+    background-color: var(--surface-color);
+    border-top: 1px solid var(--border-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 681px;
+    height: 60px;
+}
+
+.player-btn {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-btn:hover {
+    transform: scale(1.1);
+}
+
+.player-title{
+    font-family: Actor;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 12px;
+    letter-spacing: 1%;
+}
+
+.player-artist{
+    font-family: Actor;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 1%;
+}
+
+.progress-container {
+    margin: 0;
+    max-width: 681px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background-color: #E8E8E8;
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+    transition: height 0.2s ease;
+}
+
+.progress-bar:hover {
+    height: 6px;
+}
+
+.progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #FC6D3E;
+    border-radius: 2px;
+    transition: width 0.1s linear;
+}
+
+.time-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.player-track-info{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.player-fav {
+    cursor: pointer;
+    font-size: 20px;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.player-fav.active {
+    color: #ff4d4d;
+}
+
+.player-fav:hover {
+    color: #ff4d4d;
+} 
+
+.volume-control {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: auto;
+    cursor: pointer;
+    height: 24px;
+}
+
+#volumeSlider {
+  height: 4px;
+  background-color: #FC6D3E;
+} 
+
+@media (max-width: 400px) {
+    .volume-control, 
+    #repeatBtn,
+    #shuffleBtn,
+    #volumeSlider{
+        display: none;
+    }
+
+    .player{
+        display: flex;
+        
+    }
+    
+}

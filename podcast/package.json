@@ -1,0 +1,12 @@
+{
+    "name": "podcast-player",
+    "version": "1.0.0",
+    "description": "Podcast player application",
+    "scripts": {
+        "build": "tsc",
+        "watch": "tsc -w"
+    },
+    "devDependencies": {
+        "typescript": "^5.0.0"
+    }
+} 

@@ -1,0 +1,55 @@
+:root {
+    --primary-color: #1DB954;
+    --background-color: #121212;
+    --surface-color: #181818;
+    --text-color: #FFFFFF;
+    --text-secondary: #B3B3B3;
+    --error-color: #E22134;
+    --success-color: #1DB954;
+    --hover-color: #282828;
+    --border-color: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Actor", sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* Утилиты */
+.hidden {
+    display: none !important;
+}
+.text-center {
+    text-align: center;
+}
+.mt-16 {
+    margin-top: 16px;
+}
+.mb-16 {
+    margin-bottom: 16px;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.auth-form, .register-form, .track-card {
+    animation: fadeIn 0.3s ease-out;
+} 
